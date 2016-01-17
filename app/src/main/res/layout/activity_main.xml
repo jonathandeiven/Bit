@@ -12,26 +12,26 @@
     <TextView
         style="@style/GridStyle"
         android:id="@+id/definedGrid"
-        android:background="#e8443c"
-        android:text="1001001010"
+        android:background="@color/gameRed"
+        android:text="1111111"
         android:layout_below="@+id/instructions"
         android:layout_marginTop="20dp" />
 
     <TextView
         style="@style/GridStyle"
-        android:id="@+id/playGrid1"
-        android:background="#3ba858"
-        android:text="1001001010"
+        android:id="@+id/playGridGreen"
+        android:background="@color/gameGreen"
+        android:text="1111111"
         android:layout_below="@+id/definedGrid"
         android:layout_marginTop="25dp" />
 
     <TextView
         style="@style/GridStyle"
-        android:id="@+id/playGrid2"
-        android:background="#4688f2"
-        android:text="1001001010"
-        android:layout_below="@+id/playGrid1"
-        android:layout_alignStart="@+id/playGrid1"
+        android:id="@+id/playGridBlue"
+        android:background="@color/gameBlue"
+        android:text="1111111"
+        android:layout_below="@+id/playGridGreen"
+        android:layout_alignStart="@+id/playGridGreen"
         android:layout_marginTop="10dp" />
 
     <TextView
@@ -54,14 +54,138 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="&amp;"
-        android:onClick="blueAnd"
-        android:id="@+id/button"
-        android:layout_alignBaseline="@+id/playGrid1"
-        android:layout_alignBottom="@+id/playGrid1"
-        android:layout_alignStart="@+id/instructions" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/ButtonLayout"
+        android:id="@+id/blueButtons">
+
+        <Button
+            android:id="@+id/switchGreen"
+            style="@style/Button"
+            android:onClick="blueAnd"
+            android:backgroundTint="@color/gameGreen" />
+
+        <Button
+            android:id="@+id/blueAnd"
+            style="@style/Button"
+            android:text="AND"
+            android:onClick="blueAnd"
+            android:backgroundTint="@color/gameBlue"
+            android:layout_toEndOf="@+id/switchGreen" />
+
+        <Button
+            android:id="@+id/blueOr"
+            style="@style/Button"
+            android:text="OR"
+            android:onClick="blueOr"
+            android:backgroundTint="@color/gameBlue"
+            android:layout_toEndOf="@+id/blueAnd" />
+
+        <Button
+            android:id="@+id/blueXor"
+            style="@style/Button"
+            android:text="XOR"
+            android:onClick="blueXor"
+            android:backgroundTint="@color/gameBlue"
+            android:layout_toEndOf="@+id/blueOr" />
+
+        <Button
+            android:id="@+id/blueNot"
+            style="@style/Button"
+            android:text="NOT"
+            android:onClick="blueNot"
+            android:backgroundTint="@color/gameBlue"
+            android:layout_toEndOf="@+id/blueXor" />
+
+        <Button
+            android:id="@+id/blueLeftShift"
+            style="@style/Button"
+            android:text="&#60;&#60;"
+            android:onClick="blueLeftShift"
+            android:backgroundTint="@color/gameBlue"
+            android:layout_toEndOf="@+id/blueNot" />
+
+        <Button
+            android:id="@+id/blueRightShift"
+            style="@style/Button"
+            android:text="&#62;&#62;"
+            android:onClick="blueRightShift"
+            android:backgroundTint="@color/gameBlue"
+            android:layout_toEndOf="@+id/blueLeftShift" />
+
+        <Button
+            android:id="@+id/bluePlusOne"
+            style="@style/Button"
+            android:text="+1"
+            android:onClick="bluePlusOne"
+            android:backgroundTint="@color/gameBlue"
+            android:layout_toEndOf="@+id/blueRightShift" />
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/ButtonLayout"
+        android:id="@+id/greenButtons">
+
+        <Button
+            android:id="@+id/switchBlue"
+            style="@style/Button"
+            android:onClick="blueAnd"
+            android:backgroundTint="@color/gameBlue" />
+
+        <Button
+            android:id="@+id/greenAnd"
+            style="@style/Button"
+            android:text="AND"
+            android:onClick="greenAnd"
+            android:backgroundTint="@color/gameGreen"
+            android:layout_toEndOf="@+id/switchBlue" />
+
+        <Button
+            android:id="@+id/greenOr"
+            style="@style/Button"
+            android:text="OR"
+            android:onClick="greenOr"
+            android:backgroundTint="@color/gameGreen"
+            android:layout_toEndOf="@+id/greenAnd" />
+
+        <Button
+            android:id="@+id/greenXor"
+            style="@style/Button"
+            android:text="XOR"
+            android:onClick="greenXor"
+            android:backgroundTint="@color/gameGreen"
+            android:layout_toEndOf="@+id/greenOr" />
+
+        <Button
+            android:id="@+id/greenNot"
+            style="@style/Button"
+            android:text="NOT"
+            android:onClick="greenNot"
+            android:backgroundTint="@color/gameGreen"
+            android:layout_toEndOf="@+id/greenXor" />
+
+        <Button
+            android:id="@+id/greenLeftShift"
+            style="@style/Button"
+            android:text="&#60;&#60;"
+            android:onClick="greenLeftShift"
+            android:backgroundTint="@color/gameGreen"
+            android:layout_toEndOf="@+id/greenNot" />
+
+        <Button
+            android:id="@+id/greenRightShift"
+            style="@style/Button"
+            android:text="&#62;&#62;"
+            android:onClick="greenRightShift"
+            android:backgroundTint="@color/gameGreen"
+            android:layout_toEndOf="@+id/greenLeftShift" />
+
+        <Button
+            android:id="@+id/greenPlusOne"
+            style="@style/Button"
+            android:text="+1"
+            android:onClick="greenPlusOne"
+            android:backgroundTint="@color/gameGreen"
+            android:layout_toEndOf="@+id/greenRightShift" />
+    </RelativeLayout>
 
 </RelativeLayout>
