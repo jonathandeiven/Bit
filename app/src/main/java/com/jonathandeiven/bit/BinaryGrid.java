@@ -6,7 +6,8 @@ import android.util.Log;
  * Created by jonathan on 2016-01-16.
  */
 public class BinaryGrid {
-    public final String TAG = this.getClass().getSimpleName();
+    private final String TAG = this.getClass().getSimpleName();
+
     public String binaryString;
     public int binaryNumber;
 

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Bit</string>
+    <string name="instructions">Try and use the binary operators below to get the green or blue bar
+        to match the red bar.</string>
+    <string name="btnAnd">AND</string>
+    <string name="btnOr">OR</string>
+    <string name="btnXor">XOR</string>
+    <string name="btnNot">NOT</string>
+    <string name="btnLeftShift">&#60;&#60;</string>
+    <string name="btnRightShift">&#62;&#62;</string>
+    <string name="btnPlusOne">+1</string>
 </resources>

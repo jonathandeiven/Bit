@@ -1,7 +1,5 @@
 package com.jonathandeiven.bit;
 
-import android.util.Log;
-
 /**
  * Created by jonathan on 2016-01-16.
  */
@@ -25,11 +23,11 @@ public class BinaryActions {
     public static void binaryNot(BinaryGrid grid){
         grid.binaryNumber = ~grid.binaryNumber;
         grid.updateBinaryString();
-        Log.d("TEST", Integer.toString(grid.binaryNumber));
+        grid.binaryString = grid.binaryString.substring(grid.binaryString.length() - 7);
     }
 
     public static void binaryLeftShift(BinaryGrid grid){
-        if (grid.binaryNumber < (int) (Math.pow(2, MainActivity.difficulty) - 1)) {
+        if (grid.binaryNumber < (int) (Math.pow(2, MainActivity.difficulty - 1))) {
             grid.binaryNumber <<= 1;
         }
         grid.updateBinaryString();

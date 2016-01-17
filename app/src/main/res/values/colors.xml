@@ -2,9 +2,9 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#231f20</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#1976d2</color>
     <color name="background_material_light">#f3f5f7</color>
-    <color name="gameBlue">#4688f2</color>
-    <color name="gameGreen">#3ba858</color>
-    <color name="gameRed">#e8443c</color>
+    <color name="gameBlue">#1d8bf1</color>
+    <color name="gameGreen">#42a646</color>
+    <color name="gameRed">#f43930</color>
 </resources>

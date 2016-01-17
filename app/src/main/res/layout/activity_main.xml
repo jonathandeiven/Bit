@@ -10,6 +10,28 @@
     tools:context="com.jonathandeiven.bit.MainActivity">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/app_name"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="27dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/instructions"
+        android:id="@+id/instructions"
+        android:layout_marginTop="38dp"
+        android:textSize="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
         style="@style/GridStyle"
         android:id="@+id/definedGrid"
         android:background="@color/gameRed"
@@ -34,26 +56,6 @@
         android:layout_alignStart="@+id/playGridGreen"
         android:layout_marginTop="10dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Try and use the binary operators below to get the green or blue bar to match the red bar."
-        android:id="@+id/instructions"
-        android:layout_marginTop="38dp"
-        android:textSize="14dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Bit"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         style="@style/ButtonLayout"
         android:id="@+id/blueButtons">
@@ -67,7 +69,7 @@
         <Button
             android:id="@+id/blueAnd"
             style="@style/Button"
-            android:text="AND"
+            android:text="@string/btnAnd"
             android:onClick="blueAnd"
             android:backgroundTint="@color/gameBlue"
             android:layout_toEndOf="@+id/switchGreen" />
@@ -75,7 +77,7 @@
         <Button
             android:id="@+id/blueOr"
             style="@style/Button"
-            android:text="OR"
+            android:text="@string/btnOr"
             android:onClick="blueOr"
             android:backgroundTint="@color/gameBlue"
             android:layout_toEndOf="@+id/blueAnd" />
@@ -83,7 +85,7 @@
         <Button
             android:id="@+id/blueXor"
             style="@style/Button"
-            android:text="XOR"
+            android:text="@string/btnXor"
             android:onClick="blueXor"
             android:backgroundTint="@color/gameBlue"
             android:layout_toEndOf="@+id/blueOr" />
@@ -91,7 +93,7 @@
         <Button
             android:id="@+id/blueNot"
             style="@style/Button"
-            android:text="NOT"
+            android:text="@string/btnNot"
             android:onClick="blueNot"
             android:backgroundTint="@color/gameBlue"
             android:layout_toEndOf="@+id/blueXor" />
@@ -99,7 +101,7 @@
         <Button
             android:id="@+id/blueLeftShift"
             style="@style/Button"
-            android:text="&#60;&#60;"
+            android:text="@string/btnLeftShift"
             android:onClick="blueLeftShift"
             android:backgroundTint="@color/gameBlue"
             android:layout_toEndOf="@+id/blueNot" />
@@ -107,7 +109,7 @@
         <Button
             android:id="@+id/blueRightShift"
             style="@style/Button"
-            android:text="&#62;&#62;"
+            android:text="@string/btnRightShift"
             android:onClick="blueRightShift"
             android:backgroundTint="@color/gameBlue"
             android:layout_toEndOf="@+id/blueLeftShift" />
@@ -115,7 +117,7 @@
         <Button
             android:id="@+id/bluePlusOne"
             style="@style/Button"
-            android:text="+1"
+            android:text="@string/btnPlusOne"
             android:onClick="bluePlusOne"
             android:backgroundTint="@color/gameBlue"
             android:layout_toEndOf="@+id/blueRightShift" />
@@ -134,7 +136,7 @@
         <Button
             android:id="@+id/greenAnd"
             style="@style/Button"
-            android:text="AND"
+            android:text="@string/btnAnd"
             android:onClick="greenAnd"
             android:backgroundTint="@color/gameGreen"
             android:layout_toEndOf="@+id/switchBlue" />
@@ -142,7 +144,7 @@
         <Button
             android:id="@+id/greenOr"
             style="@style/Button"
-            android:text="OR"
+            android:text="@string/btnOr"
             android:onClick="greenOr"
             android:backgroundTint="@color/gameGreen"
             android:layout_toEndOf="@+id/greenAnd" />
@@ -150,7 +152,7 @@
         <Button
             android:id="@+id/greenXor"
             style="@style/Button"
-            android:text="XOR"
+            android:text="@string/btnXor"
             android:onClick="greenXor"
             android:backgroundTint="@color/gameGreen"
             android:layout_toEndOf="@+id/greenOr" />
@@ -158,7 +160,7 @@
         <Button
             android:id="@+id/greenNot"
             style="@style/Button"
-            android:text="NOT"
+            android:text="@string/btnNot"
             android:onClick="greenNot"
             android:backgroundTint="@color/gameGreen"
             android:layout_toEndOf="@+id/greenXor" />
@@ -166,7 +168,7 @@
         <Button
             android:id="@+id/greenLeftShift"
             style="@style/Button"
-            android:text="&#60;&#60;"
+            android:text="@string/btnLeftShift"
             android:onClick="greenLeftShift"
             android:backgroundTint="@color/gameGreen"
             android:layout_toEndOf="@+id/greenNot" />
@@ -174,7 +176,7 @@
         <Button
             android:id="@+id/greenRightShift"
             style="@style/Button"
-            android:text="&#62;&#62;"
+            android:text="@string/btnRightShift"
             android:onClick="greenRightShift"
             android:backgroundTint="@color/gameGreen"
             android:layout_toEndOf="@+id/greenLeftShift" />
@@ -182,10 +184,9 @@
         <Button
             android:id="@+id/greenPlusOne"
             style="@style/Button"
-            android:text="+1"
+            android:text="@string/btnPlusOne"
             android:onClick="greenPlusOne"
             android:backgroundTint="@color/gameGreen"
             android:layout_toEndOf="@+id/greenRightShift" />
     </RelativeLayout>
-
 </RelativeLayout>
