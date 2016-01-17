@@ -10,16 +10,24 @@ public class BinaryGrid {
     public String binaryString;
     public int binaryNumber;
 
-    public BinaryGrid(int levelDifficulty){
-        generateBinaryString(levelDifficulty);
+    public BinaryGrid(int levelDifficulty, int seed){
+        generateBinaryString(levelDifficulty, seed);
     }
 
-    public void generateBinaryString(int levelDifficulty){
-        Random rand = new Random();
+    /**
+     * Generates a random number and its binary representation
+     * @param levelDifficulty: Number of binary places
+     */
+    public void generateBinaryString(int levelDifficulty, int seed){
+        Random rand = new Random(seed);
         int binaryLimit = (int)Math.pow(2, levelDifficulty); //limit int to highest number possible
-        binaryNumber = rand.nextInt(binaryLimit);
-        binaryString = Integer.toBinaryString(binaryNumber);
 
-        Log.d(TAG, binaryString);
+        binaryNumber = rand.nextInt(binaryLimit);
+        binaryString = String.format("%7s", Integer.toBinaryString(binaryNumber)).replace(" ", "0");
+        Log.d(TAG, "Number is " + Integer.toString(binaryNumber) + " and Random is " + binaryString);
+    }
+
+    public void updateBinaryString(){
+        binaryString = String.format("%7s", Integer.toBinaryString(binaryNumber)).replace(" ", "0");
     }
 }

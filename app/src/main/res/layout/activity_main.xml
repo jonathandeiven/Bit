@@ -10,26 +10,35 @@
     tools:context="com.jonathandeiven.bit.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/definedBinary"
-        android:singleLine="true"
-        android:textColor="#fff"
-        android:textSize="35dp"
+        style="@style/GridStyle"
+        android:id="@+id/definedGrid"
         android:background="#e8443c"
         android:text="1001001010"
-        android:gravity="center_vertical|center_horizontal"
-        android:fontFamily="monospace"
-        android:letterSpacing="1"
-        android:layout_marginTop="32dp"
         android:layout_below="@+id/instructions"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        style="@style/GridStyle"
+        android:id="@+id/playGrid1"
+        android:background="#3ba858"
+        android:text="1001001010"
+        android:layout_below="@+id/definedGrid"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        style="@style/GridStyle"
+        android:id="@+id/playGrid2"
+        android:background="#4688f2"
+        android:text="1001001010"
+        android:layout_below="@+id/playGrid1"
+        android:layout_alignStart="@+id/playGrid1"
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Try and use the binary operators below to get either blue bar to match the red bar."
+        android:text="Try and use the binary operators below to get the green or blue bar to match the red bar."
         android:id="@+id/instructions"
         android:layout_marginTop="38dp"
         android:textSize="14dp"
@@ -44,5 +53,15 @@
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&amp;"
+        android:onClick="blueAnd"
+        android:id="@+id/button"
+        android:layout_alignBaseline="@+id/playGrid1"
+        android:layout_alignBottom="@+id/playGrid1"
+        android:layout_alignStart="@+id/instructions" />
 
 </RelativeLayout>
